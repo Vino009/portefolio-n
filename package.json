@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-deo-gratias-adindje",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Portfolio freelance de Déo Gratias Adindje — site statique + fonction Vercel pour le formulaire de contact.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npx vercel dev"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

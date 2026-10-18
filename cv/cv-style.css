@@ -1,0 +1,457 @@
+/* ============================================
+   CV STYLES - Professional Resume
+   Charte graphique alignée avec le portfolio
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette - Same as portfolio */
+    --primary-color: #283e51;
+    --primary-dark: #1e2f3f;
+    --primary-light: #3a556b;
+    --text-primary: #2c3e50;
+    --text-secondary: #5a6c7d;
+    --text-light: #8a9ba8;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --border-color: #e1e8ed;
+    
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 11pt;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.cv-container {
+    max-width: 210mm; /* A4 width */
+    margin: 0 auto;
+    padding: 20mm;
+    background-color: var(--bg-primary);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.cv-header {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+}
+
+.header-left {
+    flex: 1;
+}
+
+.cv-name {
+    font-size: 28pt;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.5px;
+}
+
+.cv-title {
+    font-size: 16pt;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.header-right {
+    flex: 1;
+    text-align: right;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 9pt;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.15rem;
+}
+
+.contact-item a,
+.contact-item span {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+
+.cv-section {
+    margin-bottom: var(--spacing-lg);
+    page-break-inside: avoid;
+}
+
+.section-title {
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   PROFILE SECTION
+   ============================================ */
+
+.profile-section {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-md);
+    border-radius: 4px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.profile-text {
+    font-size: 10.5pt;
+    line-height: 1.7;
+    color: var(--text-primary);
+    text-align: justify;
+}
+
+/* ============================================
+   EXPERIENCE
+   ============================================ */
+
+.experience-item {
+    margin-bottom: var(--spacing-md);
+    page-break-inside: avoid;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    gap: var(--spacing-sm);
+}
+
+.experience-left {
+    flex: 1;
+}
+
+.experience-job {
+    font-size: 12pt;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.experience-company {
+    font-size: 10pt;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.experience-period {
+    font-size: 9pt;
+    font-weight: 500;
+    color: var(--text-light);
+    white-space: nowrap;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.experience-list li {
+    font-size: 10pt;
+    color: var(--text-secondary);
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+}
+
+.experience-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ============================================
+   SKILLS
+   ============================================ */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.skill-category {
+    page-break-inside: avoid;
+}
+
+.skill-category-title {
+    font-size: 11pt;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 4px;
+    font-size: 9pt;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+}
+
+/* ============================================
+   SOFT SKILLS
+   ============================================ */
+
+.soft-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.soft-skill-tag {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font-size: 9.5pt;
+    font-weight: 500;
+}
+
+/* ============================================
+   EDUCATION
+   ============================================ */
+
+.education-item {
+    margin-bottom: var(--spacing-md);
+    page-break-inside: avoid;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.education-left {
+    flex: 1;
+}
+
+.education-degree {
+    font-size: 11pt;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.education-school {
+    font-size: 10pt;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.education-period {
+    font-size: 9pt;
+    font-weight: 500;
+    color: var(--text-light);
+    white-space: nowrap;
+}
+
+/* ============================================
+   LANGUAGES
+   ============================================ */
+
+.languages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.language-item:last-child {
+    border-bottom: none;
+}
+
+.language-name {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.language-level {
+    font-size: 9.5pt;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* ============================================
+   INTERESTS
+   ============================================ */
+
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.interest-tag {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 4px;
+    font-size: 9.5pt;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .cv-container {
+        padding: 15mm;
+        max-width: 100%;
+    }
+    
+    .cv-section {
+        page-break-inside: avoid;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .experience-item,
+    .education-item {
+        page-break-inside: avoid;
+    }
+    
+    .section-title {
+        page-break-after: avoid;
+    }
+    
+    a {
+        color: var(--text-secondary) !important;
+        text-decoration: none;
+    }
+    
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}
+
+/* ============================================
+   RESPONSIVE (for screen preview)
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+    .cv-container {
+        padding: var(--spacing-md);
+        max-width: 100%;
+    }
+    
+    .header-content {
+        flex-direction: column;
+    }
+    
+    .header-right {
+        text-align: left;
+    }
+    
+    .contact-item {
+        align-items: flex-start;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .experience-header,
+    .education-header {
+        flex-direction: column;
+    }
+    
+    .experience-period,
+    .education-period {
+        margin-top: 0.25rem;
+    }
+}
