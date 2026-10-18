@@ -57,8 +57,11 @@ export default async function handler(req, res) {
 
   const body = await readBody(req);
 
-  // Champ piège anti-spam : rempli uniquement par les robots.
-  if (body.website) return res.status(200).json({ ok: true });
+  // Champ piège anti-spam (nom volontairement non standard pour que les navigateurs ne le remplissent pas).
+  if (typeof body.hp_check_7q === 'string' && body.hp_check_7q.trim() !== '') {
+    console.warn('[contact] Champ piège rempli : message ignoré');
+    return res.status(200).json({ ok: true });
+  }
 
   const data = {
     name: clean(body.name, LIMITS.name),
